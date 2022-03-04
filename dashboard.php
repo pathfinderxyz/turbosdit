@@ -363,7 +363,7 @@
                         </li>
                        
                         <li>
-                            <a class="has-arrow waves-effect waves-dark"  aria-expanded="false">
+                            <a class="has-arrow waves-effect waves-dark" href="?page=recepcion" aria-expanded="false">
                                 <i class="icon-note"></i>
                                 <span class="hide-menu">Recepcion
                                     <!--<span class="badge badge-pill badge-cyan ml-auto">4</span>-->
@@ -395,7 +395,7 @@
                         </li>   
                                  
                           <li>
-                            <a class="has-arrow waves-effect waves-dark"  aria-expanded="false">
+                            <a class="has-arrow waves-effect waves-dark" href="?page=almacen" aria-expanded="false">
                                 <i class="icon-layers"></i>
                                 <span class="hide-menu">Almacen</span>
                             </a>
@@ -459,7 +459,7 @@
                            
                         </li>     
                          <li>
-                            <a class="has-arrow waves-effect waves-dark"   aria-expanded="false">
+                            <a class="has-arrow waves-effect waves-dark"  href="?page=produccion" aria-expanded="false">
                                 <i class="icon-chart"></i>
                                 <span class="hide-menu">Produccion</span>
                             </a>
@@ -478,9 +478,26 @@
                             </ul>
                              
                         </li> 
-                       
                          <li>
-                            <a class="has-arrow waves-effect waves-dark"  aria-expanded="false">
+                            <a class="has-arrow waves-effect waves-dark"  href="?page=produccion" aria-expanded="false">
+                                <i class="icon-chart"></i>
+                                <span class="hide-menu">Produccion</span>
+                            </a>
+                              <ul aria-expanded="false" class="collapse">
+                                <li>
+                                    <a href="?page=produccion_ope">Orden de trabajo</a>
+                                </li>
+
+                                <li>
+                                    <a href="?page=turbos">Ver Turbos</a>
+                                </li>
+                                
+                              
+                            </ul>
+                             
+                        </li>
+                         <li>
+                            <a class="has-arrow waves-effect waves-dark"  href="?page=trabajo" aria-expanded="false">
                                 <i class="icon-docs"></i>
                                 <span class="hide-menu">Seguimiento</span>
                             </a>
@@ -499,7 +516,7 @@
                             
                         </li>
                           <li>
-                            <a class="has-arrow waves-effect waves-dark"   aria-expanded="false">
+                            <a class="has-arrow waves-effect waves-dark"  href="?page=reportes" aria-expanded="false">
                                 <i class="icon-printer"></i>
                                 <span class="hide-menu">Reportes</span>
                             </a>
@@ -564,7 +581,7 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-   
+    <script src="http:/code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap popper Core JavaScript -->
     <script src="assets/node_modules/popper/popper.min.js"></script>
