@@ -361,9 +361,7 @@
                             </a>
                           
                         </li>
-                        <?php  
-                                  if ($_SESSION['rol'] == 'admin' || $_SESSION['rol'] == 'recepcionista') {
-                                     echo' 
+                       
                         <li>
                             <a class="has-arrow waves-effect waves-dark" href="?page=recepcion" aria-expanded="false">
                                 <i class="icon-note"></i>
@@ -394,13 +392,8 @@
                               
                             </ul>
                            
-                        </li>  ';
-                                         }
-                                 ?>        
-                       
-                        <?php  
-                                  if ($_SESSION['rol'] == 'admin' || $_SESSION['rol'] == 'almacenista') {
-                                     echo'
+                        </li>   
+                                 
                           <li>
                             <a class="has-arrow waves-effect waves-dark" href="?page=almacen" aria-expanded="false">
                                 <i class="icon-layers"></i>
@@ -464,12 +457,7 @@
                                  
                             </ul>
                            
-                        </li>';
-                                         }
-                                 ?> 
-                         <?php  
-                                  if ($_SESSION['rol'] == 'admin') {
-                                     echo'          
+                        </li>     
                          <li>
                             <a class="has-arrow waves-effect waves-dark"  href="?page=produccion" aria-expanded="false">
                                 <i class="icon-chart"></i>
@@ -489,12 +477,7 @@
                               
                             </ul>
                              
-                        </li>';
-                                         }
-                                 ?>
-                          <?php  
-                                  if ($_SESSION['rol'] == 'operario') {
-                                     echo'          
+                        </li> 
                          <li>
                             <a class="has-arrow waves-effect waves-dark"  href="?page=produccion" aria-expanded="false">
                                 <i class="icon-chart"></i>
@@ -512,12 +495,7 @@
                               
                             </ul>
                              
-                        </li>';
-                                         }
-                                 ?>       
-                          <?php  
-                                  if ($_SESSION['rol'] == 'admin') {
-                                     echo'        
+                        </li>
                          <li>
                             <a class="has-arrow waves-effect waves-dark"  href="?page=trabajo" aria-expanded="false">
                                 <i class="icon-docs"></i>
@@ -536,12 +514,7 @@
                               
                             </ul>
                             
-                        </li>';
-                                         }
-                                 ?>
-                              <?php  
-                                  if ($_SESSION['rol'] == 'admin') {
-                                     echo'     
+                        </li>
                           <li>
                             <a class="has-arrow waves-effect waves-dark"  href="?page=reportes" aria-expanded="false">
                                 <i class="icon-printer"></i>
@@ -552,9 +525,7 @@
                                     <a href="?page=matesol">Material solicitado</a>
                                 </li>
                             </ul>
-                        </li>';
-                                         }
-                                 ?>
+                        </li>
 
                         <li>
                             <a class="waves-effect waves-dark" href="index.php" aria-expanded="false">
