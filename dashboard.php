@@ -478,24 +478,7 @@
                             </ul>
                              
                         </li> 
-                         <li>
-                            <a class="has-arrow waves-effect waves-dark"  href="?page=produccion" aria-expanded="false">
-                                <i class="icon-chart"></i>
-                                <span class="hide-menu">Produccion</span>
-                            </a>
-                              <ul aria-expanded="false" class="collapse">
-                                <li>
-                                    <a href="?page=produccion_ope">Orden de trabajo</a>
-                                </li>
-
-                                <li>
-                                    <a href="?page=turbos">Ver Turbos</a>
-                                </li>
-                                
-                              
-                            </ul>
-                             
-                        </li>
+                        
                          <li>
                             <a class="has-arrow waves-effect waves-dark"  href="?page=trabajo" aria-expanded="false">
                                 <i class="icon-docs"></i>
