@@ -6,7 +6,7 @@ include ("../coneccion/coneccion.php");
      $usuario= $_POST['username'];
      $password= $_POST['password'];
 
-$result=pg_query("select * from usuarios where usuario='$usuario' AND password='$password'"); 
+$result=pg_query($cnx,"select * from usuarios where usuario='$usuario' AND password='$password'"); 
 
 //si la consulta dio existosa guardo en result y con pg_num_rows saco la cantidad y la siguiente condicional
 // en este if pregunto si el resultado de la consulta es mayor q 0 hago lo siguiente
