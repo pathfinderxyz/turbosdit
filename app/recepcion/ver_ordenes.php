@@ -1,7 +1,7 @@
 <?php 
      
     include '../../coneccion/coneccion.php';
-    $id = $_GET['id']; 
+    $id = 1; 
 
      
     $sql = pg_query($cnx,"SELECT * FROM ordenes_trabajo");
@@ -60,7 +60,7 @@
                                             if ($row) {
                                                 while ($info = pg_fetch_assoc($sql)) {
                                                     $areat=$info['cubiculo'];
-                                                   $sql_areat = pg_query($cnx,"SELECT           * FROM cubiculos
+                                                   $sql_areat = pg_query($cnx,"SELECT * FROM cubiculos
                                                     where numero = '$areat'");
     
                                                    $resultareat = pg_fetch_assoc($sql_areat);
