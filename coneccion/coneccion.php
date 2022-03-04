@@ -1,6 +1,6 @@
 <?php  
 	$user = 'amaszjpzoroxuv';
-	$passwd = '0d97022743dce2876808c13b377f0b27ce49ff07edb7256cb5741fc8222325bb5';
+	$passwd = '0d97022743dce2876808c13b377f0b27ce49ff07edb7256cb5741fc8222325bb';
 	$db = 'da6ojti9kjs5p8';
 	$port = 5432;
 	$host = 'ec2-34-206-148-196.compute-1.amazonaws.com';
