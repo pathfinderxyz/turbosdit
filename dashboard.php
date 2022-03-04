@@ -1,5 +1,8 @@
 <?php 
     session_start();
+    include "login/seguridad.php";
+    include "Errores/mostrar_errores.php";
+    include "coneccion/coneccion.php"; 
 
     $id=$_GET['id'];
         
@@ -9,7 +12,7 @@
     include "Errores/mostrar_errores.php";
     include "coneccion/coneccion.php"; 
 
-    $sql = pg_query("select * from usuarios where id='$id'");
+    $sql = pg_query(resource "select * from usuarios where id='$id'");
     $row = pg_num_rows($sql);
     if ($row) {
         $info = pg_fetch_assoc($sql);
