@@ -4,12 +4,12 @@
     include "Errores/mostrar_errores.php";
     include "coneccion/coneccion.php"; 
 
-    $id=$_GET['id'];
+    $id=1;
         
     error_reporting(0);
   
 
-    $sql = pg_query($cnx ,"select * from usuarios where id='$id'");
+    $sql = pg_query($cnx ,"select * from usuarios where id='1'");
     $row = pg_num_rows($sql);
     if ($row) {
         $info = pg_fetch_assoc($sql);
