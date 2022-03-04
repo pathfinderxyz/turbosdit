@@ -3,7 +3,7 @@
     //include '../../Errores/mostrar_errores2.php';
 $norden = $_GET['orden'];
 
-$sql = pg_query("SELECT * from historial_ordenes where norden ='$norden'");
+$sql = pg_query($cnx,"SELECT * from historial_ordenes where norden ='$norden'");
  $row = pg_num_rows($sql);    
 
   echo '
@@ -26,7 +26,7 @@ $sql = pg_query("SELECT * from historial_ordenes where norden ='$norden'");
                                             if ($row) {
                                                 while ($info = pg_fetch_assoc($sql)) {
                                                    $areat=$info['area_trabajo'];
-                                                   $sql_areat = pg_query("SELECT * FROM cubiculos
+                                                   $sql_areat = pg_query($cnx,"SELECT * FROM cubiculos
                                                     where numero = '$areat'");
     
                                                    $resultareat = pg_fetch_assoc($sql_areat);

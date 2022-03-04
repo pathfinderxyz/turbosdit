@@ -7,7 +7,7 @@
 	$estado = 'Disponible';
 	
 	
-	$sql = pg_query("INSERT INTO cubiculos (nombre,operario,estado) VALUES ('$nombre_cubi','$asignacion','$estado')");
+	$sql = pg_query($cnx,"INSERT INTO cubiculos (nombre,operario,estado) VALUES ('$nombre_cubi','$asignacion','$estado')");
 
    if ($sql) {
 		header('Location: ../../dashboard.php?page=cubiculos');//Se guardo

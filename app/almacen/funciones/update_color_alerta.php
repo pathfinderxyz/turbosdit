@@ -6,7 +6,7 @@
     $color= $_POST['color'];
   
 	
-	$sql = pg_query("UPDATE valores_ni Set 
+	$sql = pg_query($cnx,"UPDATE valores_ni Set 
 		color='$color'
 
 		Where id='$surtido'");

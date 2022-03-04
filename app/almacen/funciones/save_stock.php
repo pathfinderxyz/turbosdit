@@ -25,14 +25,14 @@
 	
 	
 	
-	$sql = pg_query("INSERT INTO inventario (nombre,fecha_ent,observacion,cantida_ent,existencia,familia,serie,tipo_anillo,condicion,url_imagen,bodega) VALUES 
+	$sql = pg_query($cnx,"INSERT INTO inventario (nombre,fecha_ent,observacion,cantida_ent,existencia,familia,serie,tipo_anillo,condicion,url_imagen,bodega) VALUES 
 		('$pieza','$fecha','$observacion','$cantidad','$cantidad','$familia','$serie','$tipo_anillo','$condicion','$url_imagen','$bodega')");
 
-	$sql2 = pg_query("SELECT MAX(codigo) AS codigo FROM inventario");
+	$sql2 = pg_query($cnx,"SELECT MAX(codigo) AS codigo FROM inventario");
     $info2 = pg_fetch_assoc($sql2);
     $cod_inv= $info2['codigo'];
 
-	$sql3 = pg_query("INSERT INTO entradas (fecha,parte,tipo_parte,cantidad,bodega,usado_nuevo,codigo_parte) VALUES 
+	$sql3 = pg_query($cnx,"INSERT INTO entradas (fecha,parte,tipo_parte,cantidad,bodega,usado_nuevo,codigo_parte) VALUES 
 		('$fecha','$pieza','$familia','$cantidad','$bodega','$estado','$cod_inv')");
 
 

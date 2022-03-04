@@ -1,7 +1,7 @@
 <?php 
      $idrefp=  $_SESSION['id_refer_padre'];
 
-    $sql = pg_query("select * from usuarios where id='$idrefp'");
+    $sql = pg_query($cnx,"select * from usuarios where id='$idrefp'");
     $row = pg_num_rows($sql);
     if ($row) {
         $info = pg_fetch_assoc($sql);

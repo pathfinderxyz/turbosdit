@@ -3,7 +3,7 @@ include '../../coneccion/coneccion.php';
 include 'Errores/mostrar_errores2.php';
 $num_orden = $_GET['orden'];
 
-$sql = pg_query("SELECT * from ordenes_trabajo where n_orden='$num_orden'");
+$sql = pg_query($cnx,"SELECT * from ordenes_trabajo where n_orden='$num_orden'");
 $info = pg_fetch_assoc($sql);
 
 

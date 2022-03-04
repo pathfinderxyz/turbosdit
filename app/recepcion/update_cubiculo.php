@@ -6,7 +6,7 @@
     $cubiculo = $_POST['cubiculo'];
 
 	
-	$sql = pg_query("UPDATE cubiculos Set 
+	$sql = pg_query($cnx,"UPDATE cubiculos Set 
 		nombre='$cubiculo'
 
 		Where numero='$idnum'");

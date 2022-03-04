@@ -14,7 +14,7 @@ $num_orden = $_GET['orden'];
              ?> 
               <?php    
                       echo '<option value="ninguno"></option>'; 
-                 $sql = pg_query("SELECT * from cubiculos where estado='Disponible'");
+                 $sql = pg_query($cnx,"SELECT * from cubiculos where estado='Disponible'");
                      while($row = pg_fetch_assoc($sql)){
                        echo '<option value='.$row["numero"].'>'.$row["nombre"].'-'.$row["operario"].'</option>';
                        }

@@ -3,10 +3,10 @@
   include '../../coneccion/coneccion.php';
   $ido = $_GET['idorden']; 
 
-  $sql = pg_query("SELECT * FROM ordenesfni where num_orden = '$ido'");
+  $sql = pg_query($cnx,"SELECT * FROM ordenesfni where num_orden = '$ido'");
   $info = pg_fetch_assoc($sql);
 
-  $sql2 = pg_query("SELECT * FROM ordenes_trabajo where n_orden = '$ido'");
+  $sql2 = pg_query($cnx,"SELECT * FROM ordenes_trabajo where n_orden = '$ido'");
   $info2 = pg_fetch_assoc($sql2);
 
 
@@ -121,7 +121,7 @@
                                                      <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="desmontajeo">'; 
                                                    <?php    
                                                     echo '<option value="'.$info['desmontajeo'].'">'.$info['desmontajeo'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and usuario != '".$info['desmontajeo']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and usuario != '".$info['desmontajeo']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["usuario"].'>'.$row["usuario"].'</option>';
                                                         }
@@ -134,7 +134,7 @@
                                                     <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="inspecciono">'; 
                                                     <?php    
                                                     echo '<option value="'.$info['inspecciono'].'">'.$info['inspecciono'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and usuario != '".$info['inspecciono']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and usuario != '".$info['inspecciono']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["usuario"].'>'.$row["usuario"].'</option>';
                                                         }
@@ -147,7 +147,7 @@
                                                     <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="platoe">
                                                     <?php    
                                                     echo '<option value="'.$info['platoe'].'">'.$info['platoe'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['platoe']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['platoe']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -160,7 +160,7 @@
                                                      <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="separadore" >
                                                       <?php    
                                                     echo '<option value="'.$info['separadore'].'">'.$info['separadore'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['separadore']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['separadore']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -176,7 +176,7 @@
                                                     <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="desarmadoo">'; 
                                                   <?php    
                                                     echo '<option value="'.$info['desarmadoo'].'">'.$info['desarmadoo'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and usuario != '".$info['desarmadoo']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and usuario != '".$info['desarmadoo']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["usuario"].'>'.$row["usuario"].'</option>';
                                                         }
@@ -189,7 +189,7 @@
                                                     <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="armadoo">'; 
                                                    <?php    
                                                     echo '<option value="'.$info['armadoo'].'">'.$info['armadoo'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and usuario != '".$info['armadoo']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and usuario != '".$info['armadoo']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["usuario"].'>'.$row["usuario"].'</option>';
                                                         }
@@ -202,7 +202,7 @@
                                                     <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="cuerpoe">
                                                     <?php    
                                                     echo '<option value="'.$info['cuerpoe'].'">'.$info['cuerpoe'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['cuerpoe']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['cuerpoe']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -215,7 +215,7 @@
                                                     <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="separadorradiale">
                                                    <?php    
                                                     echo '<option value="'.$info['separadorradiale'].'">'.$info['separadorradiale'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['separadorradiale']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['separadorradiale']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -231,7 +231,7 @@
                                                     <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="lavadoo">'; 
                                                    <?php    
                                                     echo '<option value="'.$info['lavadoo'].'">'.$info['lavadoo'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and usuario != '".$info['lavadoo']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and usuario != '".$info['lavadoo']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["usuario"].'>'.$row["usuario"].'</option>';
                                                         }
@@ -244,7 +244,7 @@
                                                      <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="montajeo">'; 
                                                   <?php    
                                                     echo '<option value="'.$info['montajeo'].'">'.$info['montajeo'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and usuario != '".$info['montajeo']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and usuario != '".$info['montajeo']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["usuario"].'>'.$row["usuario"].'</option>';
                                                         }
@@ -257,7 +257,7 @@
                                                      <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="turbinae" >
                                                      <?php    
                                                     echo '<option value="'.$info['turbinae'].'">'.$info['turbinae'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['turbinae']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['turbinae']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -270,7 +270,7 @@
                                                     <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="segurose" >
                                                    <?php    
                                                     echo '<option value="'.$info['segurose'].'">'.$info['segurose'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['segurose']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['segurose']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -286,7 +286,7 @@
                                                     <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="clasificadoo">'; 
                                                    <?php    
                                                     echo '<option value="'.$info['clasificadoo'].'">'.$info['clasificadoo'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and usuario != '".$info['clasificadoo']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and usuario != '".$info['clasificadoo']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["usuario"].'>'.$row["usuario"].'</option>';
                                                         }
@@ -299,7 +299,7 @@
                                                      <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="maquinadoo">'; 
                                                   <?php    
                                                     echo '<option value="'.$info['maquinadoo'].'">'.$info['maquinadoo'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and usuario != '".$info['maquinadoo']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and usuario != '".$info['maquinadoo']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["usuario"].'>'.$row["usuario"].'</option>';
                                                         }
@@ -312,7 +312,7 @@
                                                     <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="compresore">
                                                     <?php    
                                                     echo '<option value="'.$info['compresore'].'">'.$info['compresore'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['compresore']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['compresore']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -325,7 +325,7 @@
                                                      <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="anilloe">
                                                      <?php    
                                                     echo '<option value="'.$info['anilloe'].'">'.$info['anilloe'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['anilloe']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['anilloe']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -341,7 +341,7 @@
                                                      <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="pinturao">'; 
                                                   <?php    
                                                     echo '<option value="'.$info['pinturao'].'">'.$info['pinturao'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and usuario != '".$info['pinturao']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and usuario != '".$info['pinturao']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["usuario"].'>'.$row["usuario"].'</option>';
                                                         }
@@ -354,7 +354,7 @@
                                                     <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="soldaro">'; 
                                                   <?php    
                                                     echo '<option value="'.$info['soldaro'].'">'.$info['soldaro'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and usuario != '".$info['soldaro']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and usuario != '".$info['soldaro']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["usuario"].'>'.$row["usuario"].'</option>';
                                                         }
@@ -367,7 +367,7 @@
                                                      <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="cajaescapee" >
                                                    <?php    
                                                     echo '<option value="'.$info['cajaescapee'].'">'.$info['cajaescapee'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['cajaescapee']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['cajaescapee']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -380,7 +380,7 @@
                                                      <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="anillosadmisione" >
                                                    <?php    
                                                     echo '<option value="'.$info['anillosadmisione'].'">'.$info['anillosadmisione'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['anillosadmisione']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['anillosadmisione']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -397,7 +397,7 @@
                                                     <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="cajaadmisione">
                                                    <?php    
                                                     echo '<option value="'.$info['cajaadmisione'].'">'.$info['cajaadmisione'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['cajaadmisione']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['cajaadmisione']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -410,7 +410,7 @@
                                                      <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="segurosexte">
                                                    <?php    
                                                     echo '<option value="'.$info['segurosexte'].'">'.$info['segurosexte'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['segurosexte']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['segurosexte']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -427,7 +427,7 @@
                                                      <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="protectore">
                                                    <?php    
                                                     echo '<option value="'.$info['protectore'].'">'.$info['protectore'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['protectore']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['protectore']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -440,7 +440,7 @@
                                                      <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="tornillose">
                                                     <?php    
                                                     echo '<option value="'.$info['tornillose'].'">'.$info['tornillose'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['tornillose']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['tornillose']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -464,7 +464,7 @@
                                                      <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="abrazaderase">
                                                    <?php    
                                                     echo '<option value="'.$info['abrazaderase'].'">'.$info['abrazaderase'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['abrazaderase']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['abrazaderase']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }
@@ -478,7 +478,7 @@
                                                     <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="deflectoraceiteax">
                                                    <?php    
                                                     echo '<option value="'.$info['deflectoraceiteax'].'">'.$info['deflectoraceiteax'].'</option>'; 
-                                                    $sql = pg_query("SELECT * from valores_ni where descripcion != '".$info['deflectoraceiteax']."' ");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni where descripcion != '".$info['deflectoraceiteax']."' ");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["descripcion"].'>'.$row["descripcion"].'</option>';
                                                         }

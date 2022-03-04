@@ -37,7 +37,7 @@
           
                                                <?php    
                                                   echo '<option value="ninguno"></option>'; 
-                                                  $sql = pg_query("SELECT * from usuarios where rol='almacenista'");
+                                                  $sql = pg_query($cnx,"SELECT * from usuarios where rol='almacenista'");
                                                   while($row = pg_fetch_assoc($sql)){
                                                   echo '<option value='.$row["usuario"].'>'.$row["usuario"].'</option>';
                                                  }

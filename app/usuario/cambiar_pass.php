@@ -6,7 +6,7 @@
     $id_user= $_POST['id_user'];
 	$pass = $_POST['pass'];
 	
-    $sql = pg_query("UPDATE usuarios Set password='$pass' Where id='$id_user'");
+    $sql = pg_query($cnx,"UPDATE usuarios Set password='$pass' Where id='$id_user'");
 
    if ($sql) {
 		header('Location: ../../dashboard.php?page=listusuario');//Se guardo

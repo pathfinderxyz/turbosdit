@@ -3,11 +3,11 @@
     include '../../coneccion/coneccion.php';
     $pedido = $_GET['pedido']; 
 
-    $sql = pg_query("SELECT * FROM pedidos where cod_pedido='$pedido'");
+    $sql = pg_query($cnx,"SELECT * FROM pedidos where cod_pedido='$pedido'");
     $info = pg_fetch_assoc($sql);
     $id_material = $info['peticion'];
 
-    $cons_inv = pg_query("SELECT * FROM inventario where codigo = '$id_material'");
+    $cons_inv = pg_query($cnx,"SELECT * FROM inventario where codigo = '$id_material'");
     $result_inv = pg_fetch_assoc($cons_inv);
     $materialinv = $result_inv['nombre'];
     

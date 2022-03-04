@@ -74,7 +74,7 @@
                                                 <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="desmontajeo">'; 
                                                    <?php    
                                                     echo '<option value="ninguno"></option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and estado='Disponible'");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and estado='Disponible'");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option>'.$row["usuario"];
                                                         }
@@ -86,7 +86,7 @@
                                                 <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="inspecciono">'; 
                                                    <?php    
                                                     echo '<option value="ninguno"></option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and estado='Disponible'");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and estado='Disponible'");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option>'.$row["usuario"];
                                                         }
@@ -117,7 +117,7 @@
                                                 <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="desarmadoo">'; 
                                                    <?php    
                                                     echo '<option value="ninguno"></option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and estado='Disponible'");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and estado='Disponible'");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option>'.$row["usuario"];
                                                         }
@@ -129,7 +129,7 @@
                                                  <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="armadoo">'; 
                                                    <?php    
                                                     echo '<option value="ninguno"></option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and estado='Disponible'");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and estado='Disponible'");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option>'.$row["usuario"];
                                                         }
@@ -161,7 +161,7 @@
                                                 <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="lavadoo">'; 
                                                    <?php    
                                                     echo '<option value="ninguno"></option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and estado='Disponible'");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and estado='Disponible'");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option>'.$row["usuario"];
                                                         }
@@ -173,7 +173,7 @@
                                                    <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="montajeo">'; 
                                                    <?php    
                                                     echo '<option value="ninguno"></option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and estado='Disponible'");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and estado='Disponible'");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option>'.$row["usuario"];
                                                         }
@@ -205,7 +205,7 @@
                                                <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="clasificadoo">'; 
                                                    <?php    
                                                     echo '<option value="ninguno"></option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and estado='Disponible'");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and estado='Disponible'");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option>'.$row["usuario"];
                                                         }
@@ -217,7 +217,7 @@
                                                   <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="maquinadoo">'; 
                                                    <?php    
                                                     echo '<option value="ninguno"></option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and estado='Disponible'");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and estado='Disponible'");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option>'.$row["usuario"];
                                                         }
@@ -249,7 +249,7 @@
                                                <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="pinturao">'; 
                                                    <?php    
                                                     echo '<option value="ninguno"></option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and estado='Disponible'");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and estado='Disponible'");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option>'.$row["usuario"];
                                                         }
@@ -261,7 +261,7 @@
                                                   <select  class="form-control custom-select" data-placeholder="Choose a Category"  name="soldaro">'; 
                                                    <?php    
                                                     echo '<option value="ninguno"></option>'; 
-                                                    $sql = pg_query("SELECT * from usuarios where rol='operario' and estado='Disponible'");
+                                                    $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and estado='Disponible'");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option>'.$row["usuario"];
                                                         }

@@ -6,7 +6,7 @@ include '../../coneccion/coneccion.php';
 	
 	
 	
-	$sql = pg_query("INSERT INTO conceptos_mov (movimiento) VALUES ('$concepto')");
+	$sql = pg_query($cnx,"INSERT INTO conceptos_mov (movimiento) VALUES ('$concepto')");
 
    if ($sql) {
 		header('Location: ../../dashboard.php?page=concepto');//Se guardo

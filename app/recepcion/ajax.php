@@ -4,7 +4,7 @@ include '../../coneccion/coneccion.php';
 $html = '';
 $key = $_POST['key'];
 
-$result = pg_query("SELECT * from turbos WHERE UPPER(modelo) LIKE UPPER('%" .$key. "%')");
+$result = pg_query($cnx,"SELECT * from turbos WHERE UPPER(modelo) LIKE UPPER('%" .$key. "%')");
 
 if (pg_num_rows($result) > 0) {
     while ($info = pg_fetch_assoc($result)) {                

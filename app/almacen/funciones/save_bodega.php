@@ -8,7 +8,7 @@
 	
 	
 	
-	$sql = pg_query("INSERT INTO bodegas (nombre,descripcion,encargado) VALUES ('$bodega','$descripcion','$encargado')");
+	$sql = pg_query($cnx,"INSERT INTO bodegas (nombre,descripcion,encargado) VALUES ('$bodega','$descripcion','$encargado')");
 
    if ($sql) {
 		header('Location: ../../../dashboard.php?page=bodegas');//Se guardo

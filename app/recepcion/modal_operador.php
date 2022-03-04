@@ -14,7 +14,7 @@ $num_cubi = $_GET['num'];
              ?> 
               <?php    
                       echo '<option value="ninguno"></option>'; 
-                 $sql = pg_query("SELECT * from usuarios where rol='operario' and estado='Disponible'");
+                 $sql = pg_query($cnx,"SELECT * from usuarios where rol='operario' and estado='Disponible'");
                      while($row = pg_fetch_assoc($sql)){
                        echo '<option>'.$row["usuario"];
                        }

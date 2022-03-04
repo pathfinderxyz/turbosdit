@@ -14,7 +14,7 @@
       $url_imagen = $ruta_real.$nombre_img;
 
       
-      $sql = pg_query("INSERT INTO turbos (modelo,marca,url_imagen) VALUES ('$modelo_turbo','$marca','$url_imagen')");
+      $sql = pg_query($cnx,"INSERT INTO turbos (modelo,marca,url_imagen) VALUES ('$modelo_turbo','$marca','$url_imagen')");
 
        move_uploaded_file($_FILES['imagen']['tmp_name'],$directorio.$nombre_img);
 

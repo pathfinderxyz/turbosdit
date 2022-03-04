@@ -4,7 +4,7 @@
      
 
      
-    $sql = pg_query("SELECT * FROM conceptos_mov");
+    $sql = pg_query($cnx,"SELECT * FROM conceptos_mov");
     
     $row = pg_num_rows($sql);
     

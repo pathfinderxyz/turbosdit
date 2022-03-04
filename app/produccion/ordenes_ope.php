@@ -3,7 +3,7 @@
     include '../../coneccion/coneccion.php';
     $id = $_GET['id']; 
     $usuario = $_SESSION['usuario'];
-    $sql = pg_query("SELECT * FROM ordenes_trabajo where operador = '$usuario'");
+    $sql = pg_query($cnx,"SELECT * FROM ordenes_trabajo where operador = '$usuario'");
     $row = pg_num_rows($sql);    
    
     

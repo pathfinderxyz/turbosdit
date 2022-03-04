@@ -8,7 +8,7 @@
 	
 	
 	
-	$sql = pg_query("INSERT INTO categoria_articulos (nombre_familia,descripcion) 
+	$sql = pg_query($cnx,"INSERT INTO categoria_articulos (nombre_familia,descripcion) 
 		VALUES ('$nombre_familia','$descripcion')");
 
     if ($sql) {

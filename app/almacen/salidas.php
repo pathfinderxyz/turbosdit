@@ -4,7 +4,7 @@
     $id = $_GET['id']; 
 
      
-    $sql = pg_query("SELECT * FROM salidas");
+    $sql = pg_query($cnx,"SELECT * FROM salidas");
     
     $row = pg_num_rows($sql);
     

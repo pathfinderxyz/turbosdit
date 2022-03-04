@@ -6,7 +6,7 @@
     $condicion = $_POST['condicion'];
     $obs_condicion = $_POST['obs_condicion'];
 	
-	$sql = pg_query("UPDATE inventario Set 
+	$sql = pg_query($cnx,"UPDATE inventario Set 
 		condicion='$condicion',
 		obs_condicion='$obs_condicion'
 

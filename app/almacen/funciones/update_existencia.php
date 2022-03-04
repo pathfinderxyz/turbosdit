@@ -6,7 +6,7 @@
     $existencia = $_POST['existencia'];
   
 	
-	$sql = pg_query("UPDATE inventario Set 
+	$sql = pg_query($cnx,"UPDATE inventario Set 
 		existencia='$existencia'
 
 		Where codigo='$codinv'");

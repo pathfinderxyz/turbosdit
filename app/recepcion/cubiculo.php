@@ -4,7 +4,7 @@
     $id = $_GET['id']; 
 
      
-    $sql = pg_query("SELECT * FROM cubiculos");
+    $sql = pg_query($cnx,"SELECT * FROM cubiculos");
     
     $row = pg_num_rows($sql);
     

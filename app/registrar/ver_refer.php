@@ -4,7 +4,7 @@
     $id = $_GET['id']; 
 
      
-    $sql = pg_query("SELECT * FROM usuarios");
+    $sql = pg_query($cnx,"SELECT * FROM usuarios");
     
     $row = pg_num_rows($sql);
     

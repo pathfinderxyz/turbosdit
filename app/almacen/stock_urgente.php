@@ -3,7 +3,7 @@
     include '../../coneccion/coneccion.php';
     $id = $_GET['id']; 
 
-    $sql = pg_query("SELECT * FROM inventario where existencia <= minimos");
+    $sql = pg_query($cnx,"SELECT * FROM inventario where existencia <= minimos");
     
     $row = pg_num_rows($sql);
     
@@ -51,7 +51,7 @@
                                             if ($row) {
                                                 while ($info = pg_fetch_assoc($sql)) {
                                                    $familia_art=$info['familia'];
-                                                   $sql_turb = pg_query("SELECT * FROM categoria_articulos 
+                                                   $sql_turb = pg_query($cnx,"SELECT * FROM categoria_articulos 
                                                     where nombre_familia = '$familia_art'");
     
                                                    $result = pg_fetch_assoc($sql_turb);

@@ -4,7 +4,7 @@
     $id_orden = $_GET['idorden']; 
 
      
-    $sql = pg_query("SELECT * FROM pedidos where ni='$id_orden'");
+    $sql = pg_query($cnx,"SELECT * FROM pedidos where ni='$id_orden'");
     
     $row = pg_num_rows($sql);
     
@@ -57,7 +57,7 @@
                                             if ($row) {
                                                 while ($info = pg_fetch_assoc($sql)) {
                                                    $cod_art=$info['peticion'];
-                                                   $sql_inv = pg_query("SELECT * FROM inventario 
+                                                   $sql_inv = pg_query($cnx,"SELECT * FROM inventario 
                                                     where codigo = '$cod_art'");
     
                                                    $info_inv = pg_fetch_assoc($sql_inv);

@@ -37,7 +37,7 @@
                                             name="surtido">'; 
                                                    <?php    
                                                     
-                                                    $sql = pg_query("SELECT * from valores_ni");
+                                                    $sql = pg_query($cnx,"SELECT * from valores_ni");
                                                     while($row = pg_fetch_assoc($sql)){
                                                     echo '<option value='.$row["id"].'>'.$row["surtido"].'</option>';
                                                         }

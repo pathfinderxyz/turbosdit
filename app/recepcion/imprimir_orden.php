@@ -4,7 +4,7 @@
     $num_orden = $_GET['orden']; 
 
      
-    $sql = pg_query("SELECT * FROM ordenes_trabajo where n_orden='$num_orden'");
+    $sql = pg_query($cnx,"SELECT * FROM ordenes_trabajo where n_orden='$num_orden'");
     $info = pg_fetch_assoc($sql)
     
 ?>

@@ -12,7 +12,7 @@
 	
   
 	
-	$sql = pg_query("INSERT INTO usuarios (usuario,password,rol,caracteristicas,activo,estado) VALUES ('$nombre','$pass','$perfil','$caracteristicas','$activo','$estado')");
+	$sql = pg_query($cnx,"INSERT INTO usuarios (usuario,password,rol,caracteristicas,activo,estado) VALUES ('$nombre','$pass','$perfil','$caracteristicas','$activo','$estado')");
 
    if ($sql) {
 		header('Location: ../../dashboard.php?page=listusuario');//Se guardo

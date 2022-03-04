@@ -11,7 +11,7 @@
 
 
 	
-	$sql = pg_query("UPDATE usuarios Set 
+	$sql = pg_query($cnx,"UPDATE usuarios Set 
 		usuario='$usuario',
 		rol='$rol',
 		caracteristicas='$caracteristicas'  

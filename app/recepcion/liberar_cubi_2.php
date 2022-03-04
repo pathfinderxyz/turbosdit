@@ -10,11 +10,11 @@
 
 
 	
-	$sql = pg_query("UPDATE cubiculos Set operario='$operador' Where numero='$num_cubi'");
+	$sql = pg_query($cnx,"UPDATE cubiculos Set operario='$operador' Where numero='$num_cubi'");
 
-	$sql2 = pg_query("UPDATE usuarios SET estado='$estado' Where cubiculo='$num_cubi'");
+	$sql2 = pg_query($cnx,"UPDATE usuarios SET estado='$estado' Where cubiculo='$num_cubi'");
 
-	$sql3 = pg_query("UPDATE usuarios SET cubiculo='$cubiculo' Where cubiculo='$num_cubi'");
+	$sql3 = pg_query($cnx,"UPDATE usuarios SET cubiculo='$cubiculo' Where cubiculo='$num_cubi'");
 
 	
 	

@@ -19,14 +19,14 @@
 
 	
 	
-	$sql1 = pg_query("INSERT INTO entradas (fecha,parte,tipo_parte,cantidad,bodega,usado_nuevo,codigo_parte) VALUES 
+	$sql1 = pg_query($cnx,"INSERT INTO entradas (fecha,parte,tipo_parte,cantidad,bodega,usado_nuevo,codigo_parte) VALUES 
 		('$fecha','$partes','$pertenece_a','$cantidad','$bodega','$estado','$codigo')");
 
-    $suma = pg_query("SELECT * FROM inventario Where codigo='$codigo'");
+    $suma = pg_query($cnx,"SELECT * FROM inventario Where codigo='$codigo'");
     $isuma = pg_fetch_assoc($suma);
     $nueva_cantidad = $isuma['existencia'] + $cantidad;
 
-	$sql2 = pg_query("UPDATE inventario Set 
+	$sql2 = pg_query($cnx,"UPDATE inventario Set 
 
 		fecha_ent='$fecha',
 		cantida_ent='$cantidad',

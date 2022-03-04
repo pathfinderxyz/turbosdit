@@ -1,7 +1,7 @@
 <?php
 include '../../coneccion/coneccion.php';
 
-$sql = pg_query("SELECT MAX(n_orden) AS n_orden FROM ordenes_trabajo");
+$sql = pg_query($cnx,"SELECT MAX(n_orden) AS n_orden FROM ordenes_trabajo");
 $info = pg_fetch_assoc($sql);
 $folio = $info['n_orden'];
 

@@ -42,7 +42,7 @@
                                      
                                          <?php    
                                             echo '<option value="ninguno"></option>'; 
-                                            $sql = pg_query("SELECT * from categoria_articulos");
+                                            $sql = pg_query($cnx,"SELECT * from categoria_articulos");
                                             while($row = pg_fetch_assoc($sql)){
                                             echo '<option value='.$row["nombre_familia"].'>'.$row["nombre_familia"].'</option>';
                                           }
@@ -114,7 +114,7 @@
                                              
                                              <?php    
                                              echo '<option value=""></option>'; 
-                                             $sql = pg_query("SELECT nombre from  bodegas ");
+                                             $sql = pg_query($cnx,"SELECT nombre from  bodegas ");
                                               while($row = pg_fetch_assoc($sql)){
                                                echo '<option>'.$row["nombre"];
                                                 }

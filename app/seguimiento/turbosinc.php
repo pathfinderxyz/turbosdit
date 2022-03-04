@@ -4,7 +4,7 @@
     $id = $_GET['id']; 
 
      
-    $sql = pg_query("SELECT * FROM inventario where familia='Turbo' and condicion='Incompleto'");
+    $sql = pg_query($cnx,"SELECT * FROM inventario where familia='Turbo' and condicion='Incompleto'");
     
     $row = pg_num_rows($sql);
     

@@ -3,7 +3,7 @@ include '../../coneccion/coneccion.php';
 include '../../Errores/mostrar_errores2.php';
 $idnum = $_GET['num'];
 
-$sql = pg_query("SELECT * from cubiculos where numero='$idnum'");
+$sql = pg_query($cnx,"SELECT * from cubiculos where numero='$idnum'");
 $info = pg_fetch_assoc($sql);
 
 

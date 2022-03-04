@@ -4,7 +4,7 @@
     $id = $_GET['id']; 
 
      
-    $sql = pg_query("SELECT * FROM perfiles");
+    $sql = pg_query($cnx,"SELECT * FROM perfiles");
     
     $row = pg_num_rows($sql);
     

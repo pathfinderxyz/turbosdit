@@ -15,7 +15,7 @@
       
 
      
-      $sql = pg_query("UPDATE inventario SET url_imagen='$url_imagen' where codigo ='$codigo'");
+      $sql = pg_query($cnx,"UPDATE inventario SET url_imagen='$url_imagen' where codigo ='$codigo'");
 
        move_uploaded_file($_FILES['imagen']['tmp_name'],$directorio.$nombre_img);
 

@@ -3,7 +3,7 @@ include '../../coneccion/coneccion.php';
 include '../../Errores/mostrar_errores2.php';
 $iduser = $_GET['id'];
 
-$sql = pg_query("SELECT * from usuarios where id='$iduser'");
+$sql = pg_query($cnx,"SELECT * from usuarios where id='$iduser'");
 $info = pg_fetch_assoc($sql);
 $roluser = $info['rol'];
 
@@ -23,7 +23,7 @@ $roluser = $info['rol'];
              ?> 
               <?php    
                       echo '<option value="'.$roluser.'">'.$roluser.'</option>'; 
-                 $sql = pg_query("SELECT * from perfiles where nombre != '$roluser' ");
+                 $sql = pg_query($cnx,"SELECT * from perfiles where nombre != '$roluser' ");
                      while($row = pg_fetch_assoc($sql)){
                        echo '<option value='.$row["nombre"].'>'.$row["nombre"].'</option>';
                        }

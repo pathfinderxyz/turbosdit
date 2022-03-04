@@ -4,7 +4,7 @@
     $id = $_GET['id']; 
 
      
-    $sql = pg_query("SELECT * FROM usuarios where rol ='operario'");
+    $sql = pg_query($cnx,"SELECT * FROM usuarios where rol ='operario'");
     
     $row = pg_num_rows($sql);
     
@@ -46,7 +46,7 @@
                                             if ($row) {
                                                 while ($info = pg_fetch_assoc($sql)) {
                                                    $areat=$info['cubiculo'];
-                                                   $sql_areat = pg_query("SELECT * FROM cubiculos
+                                                   $sql_areat = pg_query($cnx,"SELECT * FROM cubiculos
                                                     where numero = '$areat'");
     
                                                    $resultareat = pg_fetch_assoc($sql_areat);

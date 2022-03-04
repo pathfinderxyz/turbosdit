@@ -3,7 +3,7 @@ include '../../coneccion/coneccion.php';
 include 'Errores/mostrar_errores2.php';
 $num_orden = $_GET['orden'];
 
-$sql2 = pg_query("SELECT * from ordenes_trabajo where n_orden ='$num_orden'");
+$sql2 = pg_query($cnx,"SELECT * from ordenes_trabajo where n_orden ='$num_orden'");
 $row2 = pg_fetch_assoc($sql2);
 
   echo '<form action="app/recepcion/liberar_orden_2.php" method="post">

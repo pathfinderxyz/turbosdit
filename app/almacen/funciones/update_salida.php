@@ -18,14 +18,14 @@
 
 
 	
-	$sql1 = pg_query("INSERT INTO salidas (codigo_art,nombre_modelo,fecha_salida,cantidad,serie,observacion,folio,gastos,notas_foliadas,familia,concep_movim) VALUES 
+	$sql1 = pg_query($cnx,"INSERT INTO salidas (codigo_art,nombre_modelo,fecha_salida,cantidad,serie,observacion,folio,gastos,notas_foliadas,familia,concep_movim) VALUES 
 		('$codigo','$modelo','$fecha_salida','$cantidad','$serie','$observacion','$folio','$gastos','$notas_foliadas','$familia','$movimiento')");
 
-    $resta = pg_query("SELECT * FROM inventario Where codigo='$codigo'");
+    $resta = pg_query($cnx,"SELECT * FROM inventario Where codigo='$codigo'");
     $iresta = pg_fetch_assoc($resta);
     $nueva_cantidad = $iresta['existencia'] - $cantidad;
 
-	$sql2 = pg_query("UPDATE inventario Set 
+	$sql2 = pg_query($cnx,"UPDATE inventario Set 
 
 		fecha_salida='$fecha_salida',
 		cantidad_salida='$cantidad',

@@ -4,7 +4,7 @@
     $codigo_articulo = $_GET['codigo']; 
 
      
-    $sql_inv = pg_query("SELECT * FROM inventario where codigo = '$codigo_articulo'");
+    $sql_inv = pg_query($cnx,"SELECT * FROM inventario where codigo = '$codigo_articulo'");
     
     $info_inv = pg_fetch_assoc($sql_inv);
     
@@ -98,7 +98,7 @@
                                              
                                              <?php    
                                              echo '<option value=""></option>'; 
-                                             $sql = pg_query("SELECT nombre from  bodegas ");
+                                             $sql = pg_query($cnx,"SELECT nombre from  bodegas ");
                                               while($row = pg_fetch_assoc($sql)){
                                                echo '<option>'.$row["nombre"];
                                                 }

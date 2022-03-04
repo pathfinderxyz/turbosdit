@@ -131,7 +131,7 @@
 	$formatoni = 'si';
   
 	
-	$sql = pg_query("INSERT INTO ordenesfni
+	$sql = pg_query($cnx,"INSERT INTO ordenesfni
 		(num_orden,		
 desmontajeo,
   inspecciono,

@@ -6,7 +6,7 @@
     $minimo = $_POST['minimo'];
   
 	
-	$sql = pg_query("UPDATE inventario Set 
+	$sql = pg_query($cnx,"UPDATE inventario Set 
 		minimos='$minimo'
 
 		Where codigo='$codinv'");

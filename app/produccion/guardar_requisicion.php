@@ -16,7 +16,7 @@
 
 
 	
-	$sql = pg_query("INSERT INTO pedidos (operador,peticion,status,fecha,cantidad,ni,folio,observacion,area) VALUES 
+	$sql = pg_query($cnx,"INSERT INTO pedidos (operador,peticion,status,fecha,cantidad,ni,folio,observacion,area) VALUES 
 		('$operador','$material','$status','$fecha_requisicion','$cantidad','$ni','$folio','$observacion','$area')");
 
    if ($sql) {

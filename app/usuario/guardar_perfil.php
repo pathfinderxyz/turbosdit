@@ -10,7 +10,7 @@
 	$reportes = $_POST['reportes'];
 
 	
-	$sql = pg_query("INSERT INTO perfiles (nombre,recepcion,almacen,produccion,seguimiento,reportes) VALUES ('$nombre','$recepcion','$almacen','$produccion','$seguimiento','$reportes')");
+	$sql = pg_query($cnx,"INSERT INTO perfiles (nombre,recepcion,almacen,produccion,seguimiento,reportes) VALUES ('$nombre','$recepcion','$almacen','$produccion','$seguimiento','$reportes')");
 
    if ($sql) {
 		header('Location: ../../dashboard.php?page=listperfil');//Se guardo

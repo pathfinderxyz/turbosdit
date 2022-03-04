@@ -4,7 +4,7 @@
     $id = $_GET['id']; 
 
      
-    $sql = pg_query("SELECT * FROM inventario where familia='Turbo' and condicion='Completo'");
+    $sql = pg_query($cnx,"SELECT * FROM inventario where familia='Turbo' and condicion='Completo'");
     
     $row = pg_num_rows($sql);
     
@@ -48,7 +48,7 @@
                                             if ($row) {
                                                 while ($info = pg_fetch_assoc($sql)) {
                                                    $modturb=$info['nombre'];
-                                                   $sql_turb = pg_query("SELECT * FROM ordenes_trabajo 
+                                                   $sql_turb = pg_query($cnx,"SELECT * FROM ordenes_trabajo 
                                                     where modelo_turbo = '$modturb'");
     
                                                    $result = pg_fetch_assoc($sql_turb);

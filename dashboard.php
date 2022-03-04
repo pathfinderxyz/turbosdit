@@ -139,7 +139,7 @@
     }
 
 
-    $sqlperfil = pg_query("SELECT * from perfiles where nombre='recepcionista'");
+    $sqlperfil = pg_query($cnx,"SELECT * from perfiles where nombre='recepcionista'");
     $rowperfil = pg_fetch_assoc($sqlperfil);
     $recepcion= $rowperfil['recepcion'];
     $produccion= $rowperfil['produccion'];

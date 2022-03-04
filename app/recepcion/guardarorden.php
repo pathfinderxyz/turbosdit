@@ -20,10 +20,10 @@
 	$folio = $_POST['folio'];
 	
 	
-	$sql1 = pg_query("INSERT INTO ordenes_trabajo (fecha_rec,cliente,direccion,ciudad,rfc,telefono,modelo_turbo,bomba_iny,tipo_rep,importe,a_cuenta,restan,fecha_entrega,observaciones,status,folio)
+	$sql1 = pg_query($cnx,"INSERT INTO ordenes_trabajo (fecha_rec,cliente,direccion,ciudad,rfc,telefono,modelo_turbo,bomba_iny,tipo_rep,importe,a_cuenta,restan,fecha_entrega,observaciones,status,folio)
 	 VALUES ('$fecha_rec','$cliente','$direccion','$ciudad','$rfc','$telefono','$modelo_turbo','$bomba_iny','$tipo_rep','$importe','$a_cuenta','$restan','$fecha_entrega','$observaciones','$status','$folio')");
 
-	$sql2 = pg_query("SELECT MAX(n_orden) AS n_orden FROM ordenes_trabajo");
+	$sql2 = pg_query($cnx,"SELECT MAX(n_orden) AS n_orden FROM ordenes_trabajo");
     $info2 = pg_fetch_assoc($sql2);
     $ordenult= $info2['n_orden'];
     $area= 'no asignada';
@@ -32,7 +32,7 @@
     $status2= 'recepcionada';
 
 
-	$sql3 = pg_query("INSERT INTO historial_ordenes (norden,area_trabajo,fecha,observacion,status) VALUES ('$ordenult','$area','$fechaa','$obs','$status2')");
+	$sql3 = pg_query($cnx,"INSERT INTO historial_ordenes (norden,area_trabajo,fecha,observacion,status) VALUES ('$ordenult','$area','$fechaa','$obs','$status2')");
 
 
 

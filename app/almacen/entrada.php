@@ -4,7 +4,7 @@
     $id = $_GET['id']; 
 
      
-    $sql = pg_query("SELECT * FROM entradas");
+    $sql = pg_query($cnx,"SELECT * FROM entradas");
     
     $row = pg_num_rows($sql);
     

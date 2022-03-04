@@ -3,7 +3,7 @@ include '../../coneccion/coneccion.php';
 include 'Errores/mostrar_errores2.php';
 $num_cubi = $_GET['num'];
 
-$sql2 = pg_query("SELECT * from cubiculos where numero ='$num_cubi'");
+$sql2 = pg_query($cnx,"SELECT * from cubiculos where numero ='$num_cubi'");
 $row2 = pg_fetch_assoc($sql2);
 
   echo '<form action="app/recepcion/liberar_cubi_2.php" method="post">

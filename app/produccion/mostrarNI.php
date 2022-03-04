@@ -4,10 +4,10 @@
   include '../../coneccion/coneccion.php';
   $ido = $_GET['idorden']; 
 
-  $sql = pg_query("SELECT * FROM ordenesfni where num_orden = '$ido'");
+  $sql = pg_query($cnx,"SELECT * FROM ordenesfni where num_orden = '$ido'");
   $info = pg_fetch_assoc($sql);
 
-  $sql2 = pg_query("SELECT * FROM ordenes_trabajo where n_orden = '$ido'");
+  $sql2 = pg_query($cnx,"SELECT * FROM ordenes_trabajo where n_orden = '$ido'");
   $info2 = pg_fetch_assoc($sql2);
 
 

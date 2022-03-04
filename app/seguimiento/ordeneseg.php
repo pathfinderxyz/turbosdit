@@ -4,7 +4,7 @@
     $id = $_GET['id']; 
 
      
-    $sql = pg_query("SELECT * FROM ordenes_trabajo");
+    $sql = pg_query($cnx,"SELECT * FROM ordenes_trabajo");
     
     $row = pg_num_rows($sql);
     
@@ -46,7 +46,7 @@
                                             if ($row) {
                                                 while ($info = pg_fetch_assoc($sql)) {
                                                     $norden=$info['n_orden'];
-                                                   $sql_turb = pg_query("SELECT * FROM ordenesfni 
+                                                   $sql_turb = pg_query($cnx,"SELECT * FROM ordenesfni 
                                                     where num_orden = '$norden'");
     
                                                    $result = pg_fetch_assoc($sql_turb);

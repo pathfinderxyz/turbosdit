@@ -4,10 +4,10 @@
     $n_orden = $_GET['idorden']; 
 
      
-    $sql_inv = pg_query("SELECT * FROM inventario");
+    $sql_inv = pg_query($cnx,"SELECT * FROM inventario");
     
     $info_inv = pg_fetch_assoc($sql_inv);
-    $sqlf = pg_query("SELECT MAX(folio) AS folio FROM inventario");
+    $sqlf = pg_query($cnx,"SELECT MAX(folio) AS folio FROM inventario");
     $infof = pg_fetch_assoc($sqlf);
     $folio = $infof['folio'];
     
@@ -67,7 +67,7 @@
                                      
                                          <?php    
                                             echo '<option value="ninguno"></option>'; 
-                                            $sql = pg_query("SELECT * from inventario");
+                                            $sql = pg_query($cnx,"SELECT * from inventario");
                                             while($row = pg_fetch_assoc($sql)){
                                             echo '<option value='.$row["codigo"].'>'.$row["familia"].' '.$row["nombre"].'</option>';
                                           }

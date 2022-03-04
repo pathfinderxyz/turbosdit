@@ -5,19 +5,19 @@
     $fam = $_GET['fam']; 
 
     if ($fam=='Todos') {
-        $sql = pg_query("SELECT * FROM inventario");
+        $sql = pg_query($cnx,"SELECT * FROM inventario");
     }else{
-        $sql = pg_query("SELECT * FROM inventario where familia='$fam'");
+        $sql = pg_query($cnx,"SELECT * FROM inventario where familia='$fam'");
     }     
     
-    $sqlfiltrar = pg_query("SELECT * FROM inventario");
+    $sqlfiltrar = pg_query($cnx,"SELECT * FROM inventario");
     $row = pg_num_rows($sql);
 
-    $sql_color = pg_query("SELECT * FROM valores_ni where surtido = 'urgente'");
+    $sql_color = pg_query($cnx,"SELECT * FROM valores_ni where surtido = 'urgente'");
     $result_color = pg_fetch_assoc($sql_color);
     $colorurg = $result_color['color'];
 
-    $sql_color = pg_query("SELECT * FROM valores_ni where surtido = 'no urgente'");
+    $sql_color = pg_query($cnx,"SELECT * FROM valores_ni where surtido = 'no urgente'");
     $result_color = pg_fetch_assoc($sql_color);
     $colornourg = $result_color['color'];
     

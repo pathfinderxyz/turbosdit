@@ -2,7 +2,7 @@
 include '../../coneccion/coneccion.php';
 include 'Errores/mostrar_errores2.php';
 $num_orden = $_GET['orden'];
-$sql_cub= pg_query("SELECT * FROM ordenes_trabajo where n_orden = '$num_orden'");
+$sql_cub= pg_query($cnx,"SELECT * FROM ordenes_trabajo where n_orden = '$num_orden'");
 $result_cub = pg_fetch_assoc($sql_cub);
 $idcubactual = $result_cub['cubiculo'];
 
@@ -17,7 +17,7 @@ $idcubactual = $result_cub['cubiculo'];
              ?> 
               <?php    
                       echo '<option value="ninguno"></option>'; 
-                 $sql = pg_query("SELECT * from cubiculos where estado='Disponible'");
+                 $sql = pg_query($cnx,"SELECT * from cubiculos where estado='Disponible'");
                      while($row = pg_fetch_assoc($sql)){
                        echo '<option value='.$row["numero"].'>'.$row["nombre"].'-'.$row["operario"].'</option>';
                        }

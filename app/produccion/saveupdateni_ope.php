@@ -34,7 +34,7 @@
 
 
 	
-	$sql = pg_query ("UPDATE ordenesfni Set 
+	$sql = pg_query ($cnx,"UPDATE ordenesfni Set 
 
 	impulsor = '$impulsor',
     salida = '$salida',
@@ -65,7 +65,7 @@
 
 	Where num_orden = '$idorden'");
 
-	$sql2 = pg_query("UPDATE ordenes_trabajo Set rep_final='$repfinal' Where n_orden='$idorden'");
+	$sql2 = pg_query($cnx,"UPDATE ordenes_trabajo Set rep_final='$repfinal' Where n_orden='$idorden'");
 
 
     if ($sql) {

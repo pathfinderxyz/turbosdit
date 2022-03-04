@@ -36,7 +36,7 @@ include '../../coneccion/coneccion.php';
                                         <select  class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="perfil" id="perfil" required="">
                                                 <?php    
                                                       echo '<option value="ninguno"></option>'; 
-                                                       $sql = pg_query("SELECT * from perfiles");
+                                                       $sql = pg_query($cnx,"SELECT * from perfiles");
                                                       while($row = pg_fetch_assoc($sql)){
                                                        echo '<option>'.$row["nombre"];
                                                   }

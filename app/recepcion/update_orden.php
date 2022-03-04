@@ -19,7 +19,7 @@
 	$n_orden = $_POST['n_orden'];
 	
 	
-	$sql1 = pg_query("UPDATE ordenes_trabajo SET
+	$sql1 = pg_query($cnx,"UPDATE ordenes_trabajo SET
 
 	cliente='$cliente',
 	direccion='$direccion',

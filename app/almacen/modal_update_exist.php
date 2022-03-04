@@ -3,7 +3,7 @@ include '../../coneccion/coneccion.php';
 include '../../Errores/mostrar_errores2.php';
 $codinv = $_GET['cod'];
 
-$sql = pg_query("SELECT * from inventario where codigo='$codinv'");
+$sql = pg_query($cnx,"SELECT * from inventario where codigo='$codinv'");
 $info = pg_fetch_assoc($sql);
 
 

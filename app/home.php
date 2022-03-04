@@ -3,7 +3,7 @@
     $id = $_GET['id']; 
 
     $usuario = $_SESSION['usuario'];
-    $sql = pg_query("SELECT * FROM ordenes_trabajo");
+    $sql = pg_query($cnx,"SELECT * FROM ordenes_trabajo");
     $row = pg_num_rows($sql);  
  ?>                       
                         
@@ -62,7 +62,7 @@
                                                 while ($info = pg_fetch_assoc($sql)) {
                                                     
                                                     $areat=$info['cubiculo'];
-                                                   $sql_areat = pg_query("SELECT * FROM cubiculos
+                                                   $sql_areat = pg_query($cnx,"SELECT * FROM cubiculos
                                                     where numero = '$areat'");
     
                                                    $resultareat = pg_fetch_assoc($sql_areat);
@@ -97,7 +97,7 @@
                  <?php  
                     if ($_SESSION['rol'] == 'operario') {
                         $usuario = $_SESSION['usuario'];
-                        $sql = pg_query("SELECT * FROM ordenes_trabajo where operador = '$usuario'");
+                        $sql = pg_query($cnx,"SELECT * FROM ordenes_trabajo where operador = '$usuario'");
                         $row = pg_num_rows($sql);  
                         while ($info = pg_fetch_assoc($sql)) {
                       echo'
