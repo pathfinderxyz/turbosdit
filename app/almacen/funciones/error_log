@@ -1,0 +1,14 @@
+[20-Jan-2021 15:54:44 UTC] PHP Warning:  include(../../../Errores/mostrar_errores.php): failed to open stream: No such file or directory in /home/turbos/admon.turbos.com.mx/app/almacen/funciones/update_stock.php on line 3
+[20-Jan-2021 15:54:44 UTC] PHP Warning:  include(): Failed opening '../../../Errores/mostrar_errores.php' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/turbos/admon.turbos.com.mx/app/almacen/funciones/update_stock.php on line 3
+[20-Jan-2021 15:54:44 UTC] PHP Warning:  pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 2:   ('','turbina','','2','Almacen 1','nuevo','1')
+           ^ in /home/turbos/admon.turbos.com.mx/app/almacen/funciones/update_stock.php on line 23
+[20-Jan-2021 15:54:44 UTC] PHP Warning:  pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 3:   fecha_ent='',
+                    ^ in /home/turbos/admon.turbos.com.mx/app/almacen/funciones/update_stock.php on line 39
+[20-Jan-2021 15:57:47 UTC] PHP Warning:  include(../../../Errores/mostrar_errores.php): failed to open stream: No such file or directory in /home/turbos/admon.turbos.com.mx/app/almacen/funciones/update_stock.php on line 3
+[20-Jan-2021 15:57:47 UTC] PHP Warning:  include(): Failed opening '../../../Errores/mostrar_errores.php' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/turbos/admon.turbos.com.mx/app/almacen/funciones/update_stock.php on line 3
+[20-Jan-2021 19:25:09 UTC] PHP Warning:  include(../../../Errores/mostrar_errores.php): failed to open stream: No such file or directory in /home/turbos/admon.turbos.com.mx/app/almacen/funciones/save_bodega.php on line 3
+[20-Jan-2021 19:25:09 UTC] PHP Warning:  include(): Failed opening '../../../Errores/mostrar_errores.php' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/turbos/admon.turbos.com.mx/app/almacen/funciones/save_bodega.php on line 3
+[20-Jan-2021 20:02:16 UTC] PHP Warning:  include(../../../Errores/mostrar_errores.php): failed to open stream: No such file or directory in /home/turbos/admon.turbos.com.mx/app/almacen/funciones/update_stock.php on line 3
+[20-Jan-2021 20:02:16 UTC] PHP Warning:  include(): Failed opening '../../../Errores/mostrar_errores.php' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/turbos/admon.turbos.com.mx/app/almacen/funciones/update_stock.php on line 3
