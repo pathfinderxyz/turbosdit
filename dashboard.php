@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include "login/seguridad.php";
+    //include "login/seguridad.php";
     include "Errores/mostrar_errores.php";
     include "coneccion/coneccion.php"; 
 
